@@ -2,10 +2,20 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"math/rand"
+	"os"
 	"time"
 )
+
+func gets() string {
+	var input = bufio.NewScanner(os.Stdin)
+	if input.Scan() {
+		return input.Text()
+	}
+	return ""
+}
 
 func main() {
 	n := int(random(1, 100))
