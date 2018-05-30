@@ -3,11 +3,13 @@ class App
     @config = config
     @name = @config[:name]
     @age  = @config[:age]
+    @hobby = @config[:hobby]
   end
 
   def run
     call_name(@name)
     call_age(@age)
+    call_hobby(@hobby)
   end
 
   private
@@ -18,9 +20,14 @@ class App
   def call_age(age)
     puts age
   end
+
+  def call_hobby(hobby)
+    puts hobby
+  end
 end
 
 App.new({
   name: "Meltens",
-  age: 18
+  age: 18,
+  hobby: "Programming"
 }).run
