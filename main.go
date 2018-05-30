@@ -20,7 +20,23 @@ func gets() string {
 
 func main() {
 	n := selectLevel()
+	game(n)
 	fmt.Println(n)
+}
+
+func game(n int) {
+	for {
+		fmt.Println("数字を入力してください:")
+		in, _ := strconv.Atoi(gets())
+		if n == in {
+			fmt.Println("正解です！")
+			break
+		} else if n < in {
+			fmt.Println("入力された値よりnは小さいです")
+		} else {
+			fmt.Println("入力された値よりnは大きいです")
+		}
+	}
 }
 
 func selectLevel() int {
