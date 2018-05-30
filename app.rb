@@ -22,7 +22,7 @@ class App
   end
 
   def call_hobbies(hobbies)
-    return hobbies
+    return hobbies.join(', ')
   end
 end
 
