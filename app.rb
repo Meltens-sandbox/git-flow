@@ -7,25 +7,22 @@ class App
   end
 
   def run
-    puts "Name:"
-    call_name(@name)
-    puts "Age:"
-    call_age(@age)
-    puts "Hobbies:"
-    call_hobbies(@hobbies)
+    puts "Name: #{ call_name(@name) }"
+    puts "Age: #{ call_age(@age) }"
+    puts "Hobbies: #{ call_hobbies(@hobbies) }"
   end
 
   private
   def call_name(name)
-    puts name
+    return name
   end
 
   def call_age(age)
-    puts age
+    return age
   end
 
   def call_hobbies(hobbies)
-    puts hobbies
+    return hobbies
   end
 end
 
