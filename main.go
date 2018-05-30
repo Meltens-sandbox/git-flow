@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"math/rand"
 	"os"
+	"strconv"
 	"time"
 )
 
@@ -18,8 +19,14 @@ func gets() string {
 }
 
 func main() {
-	n := int(random(1, 100))
+	n := selectLevel()
 	fmt.Println(n)
+}
+
+func selectLevel() int {
+	fmt.Println("難易度を選択してください:")
+	i, _ := strconv.Atoi(gets())
+	return int(random(1, float64(i)))
 }
 
 func random(min, max float64) float64 {
